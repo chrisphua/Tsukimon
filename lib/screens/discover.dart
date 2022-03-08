@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:tsukimon/helpers/notifications/notification.dart';
 import 'package:tsukimon/utilities/widgets/centers.dart';
 import 'package:tsukimon/utilities/widgets/relevantServices.dart';
+import 'package:tsukimon/views/confinentNanny.dart';
 
 class DiscoverScreen extends StatelessWidget {
   const DiscoverScreen({Key? key}) : super(key: key);
@@ -83,274 +84,284 @@ class DiscoverScreen extends StatelessWidget {
                   const SizedBox(height: 20,),
                   Padding(
                     padding: const EdgeInsets.only(left: 25, right: 25),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Column(
-                          children: [
-                            Container(
-                              height: 60,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                color: const Color(0xffCCD6FF),
-                                borderRadius: BorderRadius.circular(60),
-                                image: const DecorationImage(
-                                  image: AssetImage(
-                                    'assets/images/img_confinement_nanny (9).png',
-                                  ),),
+                    child: GestureDetector(
+                      onTap: () {
+                        Get.to(() => const ConfinementNannyScreen());
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Column(
+                            children: [
+                              Container(
+                                height: 60,
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  color: const Color(0xffCCD6FF),
+                                  borderRadius: BorderRadius.circular(60),
+                                  image: const DecorationImage(
+                                    image: AssetImage(
+                                      'assets/images/img_confinement_nanny (9).png',
+                                    ),),
+                                ),
                               ),
-                            ),
-                            const SizedBox(height: 10,),
-                            const Text(
-                              'Confinement',
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w400,
-                                color: Color(0xff000000),
+                              const SizedBox(height: 10,),
+                              const Text(
+                                'Confinement',
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  fontFamily: 'Roboto',
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xff000000),
+                                ),
                               ),
-                            ),
-                            const Text(
-                              'Nanny',
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w400,
-                                color: Color(0xff000000),
+                              const Text(
+                                'Nanny',
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  fontFamily: 'Roboto',
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xff000000),
+                                ),
+                              )
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                height: 60,
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  color: const Color(0xffCCD6FF),
+                                  borderRadius: BorderRadius.circular(60),
+                                  image: const DecorationImage(
+                                    image: AssetImage(
+                                      'assets/images/img_confinement_nanny (10).png',
+                                    ),),
+                                ),
                               ),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 60,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                color: const Color(0xffCCD6FF),
-                                borderRadius: BorderRadius.circular(60),
-                                image: const DecorationImage(
-                                  image: AssetImage(
-                                    'assets/images/img_confinement_nanny (10).png',
-                                  ),),
+                              const SizedBox(height: 10,),
+                              const Text(
+                                'Baby Care',
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  fontFamily: 'Roboto',
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xff000000),
+                                ),
                               ),
-                            ),
-                            const SizedBox(height: 10,),
-                            const Text(
-                              'Baby Care',
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w400,
-                                color: Color(0xff000000),
+                              const Text(
+                                'Training',
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  fontFamily: 'Roboto',
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xff000000),
+                                ),
+                              )
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                height: 60,
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  color: const Color(0xffCCD6FF),
+                                  borderRadius: BorderRadius.circular(60),
+                                  image: const DecorationImage(
+                                    image: AssetImage(
+                                      'assets/images/img_confinement_nanny (11).png',
+                                    ),),
+                                ),
                               ),
-                            ),
-                            const Text(
-                              'Training',
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w400,
-                                color: Color(0xff000000),
+                              const SizedBox(height: 10,),
+                              const Text(
+                                'Message',
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  fontFamily: 'Roboto',
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xff000000),
+                                ),
                               ),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 60,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                color: const Color(0xffCCD6FF),
-                                borderRadius: BorderRadius.circular(60),
-                                image: const DecorationImage(
-                                  image: AssetImage(
-                                    'assets/images/img_confinement_nanny (11).png',
-                                  ),),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                height: 60,
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  color: const Color(0xffCCD6FF),
+                                  borderRadius: BorderRadius.circular(60),
+                                  image: const DecorationImage(
+                                    image: AssetImage(
+                                      'assets/images/img_confinement_nanny (12).png',
+                                    ),),
+                                ),
                               ),
-                            ),
-                            const SizedBox(height: 10,),
-                            const Text(
-                              'Message',
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w400,
-                                color: Color(0xff000000),
+                              const SizedBox(height: 10,),
+                              const Text(
+                                'Confinement',
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  fontFamily: 'Roboto',
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xff000000),
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 60,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                color: const Color(0xffCCD6FF),
-                                borderRadius: BorderRadius.circular(60),
-                                image: const DecorationImage(
-                                  image: AssetImage(
-                                    'assets/images/img_confinement_nanny (12).png',
-                                  ),),
-                              ),
-                            ),
-                            const SizedBox(height: 10,),
-                            const Text(
-                              'Confinement',
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w400,
-                                color: Color(0xff000000),
-                              ),
-                            ),
-                            const Text(
-                              'Centers',
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w400,
-                                color: Color(0xff000000),
-                              ),
-                            )
-                          ],
-                        ),
-                      ],
+                              const Text(
+                                'Centers',
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  fontFamily: 'Roboto',
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xff000000),
+                                ),
+                              )
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   const SizedBox(height: 20,),
                   Padding(
                     padding: const EdgeInsets.only(left: 25, right: 25),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Column(
-                          children: [
-                            Container(
-                              height: 60,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                color: const Color(0xffCCD6FF),
-                                borderRadius: BorderRadius.circular(60),
-                                image: const DecorationImage(
-                                  image: AssetImage(
-                                    'assets/images/img_confinement_nanny (7).png',
-                                  ),),
+                    child: GestureDetector(
+                      onTap: () {
+                        Get.to(() => const ConfinementNannyScreen());
+                      },
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Column(
+                            children: [
+                              Container(
+                                height: 60,
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  color: const Color(0xffCCD6FF),
+                                  borderRadius: BorderRadius.circular(60),
+                                  image: const DecorationImage(
+                                    image: AssetImage(
+                                      'assets/images/img_confinement_nanny (7).png',
+                                    ),),
+                                ),
                               ),
-                            ),
-                            const SizedBox(height: 10,),
-                            const Text(
-                              'Lactation',
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w400,
-                                color: Color(0xff000000),
+                              const SizedBox(height: 10,),
+                              const Text(
+                                'Lactation',
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  fontFamily: 'Roboto',
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xff000000),
+                                ),
                               ),
-                            ),
-                            const Text(
-                              'Specilist',
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w400,
-                                color: Color(0xff000000),
+                              const Text(
+                                'Specilist',
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  fontFamily: 'Roboto',
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xff000000),
+                                ),
+                              )
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                height: 60,
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  color: const Color(0xffCCD6FF),
+                                  borderRadius: BorderRadius.circular(60),
+                                  image: const DecorationImage(
+                                    image: AssetImage(
+                                      'assets/images/img_confinement_nanny (8).png',
+                                    ),),
+                                ),
                               ),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 60,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                color: const Color(0xffCCD6FF),
-                                borderRadius: BorderRadius.circular(60),
-                                image: const DecorationImage(
-                                  image: AssetImage(
-                                    'assets/images/img_confinement_nanny (8).png',
-                                  ),),
+                              const SizedBox(height: 10,),
+                              const Text(
+                                'Herbs',
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  fontFamily: 'Roboto',
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xff000000),
+                                ),
                               ),
-                            ),
-                            const SizedBox(height: 10,),
-                            const Text(
-                              'Herbs',
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w400,
-                                color: Color(0xff000000),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                height: 60,
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  color: const Color(0xffCCD6FF),
+                                  borderRadius: BorderRadius.circular(60),
+                                  image: const DecorationImage(
+                                    image: AssetImage(
+                                      'assets/images/img_confinement_nanny (13).png',
+                                    ),),
+                                ),
                               ),
-                            ),
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 60,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                color: const Color(0xffCCD6FF),
-                                borderRadius: BorderRadius.circular(60),
-                                image: const DecorationImage(
-                                  image: AssetImage(
-                                    'assets/images/img_confinement_nanny (13).png',
-                                  ),),
+                              const SizedBox(height: 10,),
+                              const Text(
+                                'Confinement',
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  fontFamily: 'Roboto',
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xff000000),
+                                ),
                               ),
-                            ),
-                            const SizedBox(height: 10,),
-                            const Text(
-                              'Confinement',
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w400,
-                                color: Color(0xff000000),
+                              const Text(
+                                'Fods',
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  fontFamily: 'Roboto',
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xff000000),
+                                ),
+                              )
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Container(
+                                height: 60,
+                                width: 60,
+                                decoration: BoxDecoration(
+                                  color: const Color(0xffE5E5E5),
+                                  borderRadius: BorderRadius.circular(60),
+                                  image: const DecorationImage(
+                                    image: AssetImage(
+                                      'assets/images/Group 62.png',
+                                    ),),
+                                ),
                               ),
-                            ),
-                            const Text(
-                              'Fods',
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w400,
-                                color: Color(0xff000000),
+                              const SizedBox(height: 10,),
+                              const Text(
+                                'More',
+                                style: TextStyle(
+                                  fontSize: 14.0,
+                                  fontFamily: 'Roboto',
+                                  fontWeight: FontWeight.w400,
+                                  color: Color(0xff000000),
+                                ),
                               ),
-                            )
-                          ],
-                        ),
-                        Column(
-                          children: [
-                            Container(
-                              height: 60,
-                              width: 60,
-                              decoration: BoxDecoration(
-                                color: const Color(0xffE5E5E5),
-                                borderRadius: BorderRadius.circular(60),
-                                image: const DecorationImage(
-                                  image: AssetImage(
-                                    'assets/images/Group 62.png',
-                                  ),),
-                              ),
-                            ),
-                            const SizedBox(height: 10,),
-                            const Text(
-                              'More',
-                              style: TextStyle(
-                                fontSize: 14.0,
-                                fontFamily: 'Roboto',
-                                fontWeight: FontWeight.w400,
-                                color: Color(0xff000000),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   const SizedBox(height: 30,),

@@ -16,6 +16,7 @@ import 'package:tsukimon/utilities/widgets/services.dart';
 import 'package:tsukimon/utilities/widgets/tab_bar.dart';
 import 'package:tsukimon/views/booking_summary.dart';
 import 'package:tsukimon/views/confinentNanny.dart';
+import 'package:tsukimon/views/confinentNannyTwo.dart';
 
 class NannyProfile extends StatefulWidget {
   const NannyProfile({Key? key}) : super(key: key);
@@ -425,7 +426,7 @@ class _NannyProfileState extends State<NannyProfile> {
                               text: 'Book',
                               bgColor: kbuttonColor,
                               press: () {
-                                Get.to(() => const ConfinementNannyScreen());
+                                Get.to(() => const ConfinementNannyTwoScreen());
                               })),
                       const SizedBox(
                         width: 15,

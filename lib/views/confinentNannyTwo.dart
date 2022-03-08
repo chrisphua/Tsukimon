@@ -6,16 +6,15 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:tsukimon/utilities/constant.dart';
 import 'package:tsukimon/utilities/widgets/roundButton.dart';
 import 'package:tsukimon/views/booking_summary.dart';
-import 'package:tsukimon/views/confinenmentNannyPage.dart';
 
-class ConfinementNannyScreen extends StatefulWidget {
-  const ConfinementNannyScreen({Key? key}) : super(key: key);
+class ConfinementNannyTwoScreen extends StatefulWidget {
+  const ConfinementNannyTwoScreen({Key? key}) : super(key: key);
 
   @override
-  State<ConfinementNannyScreen> createState() => _ConfinementNannyScreenState();
+  State<ConfinementNannyTwoScreen> createState() => _ConfinementNannyTwoScreenState();
 }
 
-class _ConfinementNannyScreenState extends State<ConfinementNannyScreen> {
+class _ConfinementNannyTwoScreenState extends State<ConfinementNannyTwoScreen> {
   final List<String> _locations = ['28 days', '42 days', '56 days'];
   String? _selectedLocation;
   DateTime? dateTime;
@@ -66,25 +65,13 @@ class _ConfinementNannyScreenState extends State<ConfinementNannyScreen> {
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Text(
+                        children: const [
+                          Text(
                             'Booking Dates',
                             style: TextStyle(
                                 color: kprimaryColor,
                                 fontSize: 20,
                                 fontWeight: FontWeight.w600),
-                          ),
-                          GestureDetector(
-                            onTap: () {
-                              Get.to(() => const BookingSummaryScreen());
-                            },
-                            child: const Text(
-                              'skip for now',
-                              style: TextStyle(
-                                  color: kbuttonColor,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w400),
-                            ),
                           ),
                         ],
                       ),
@@ -280,8 +267,8 @@ class _ConfinementNannyScreenState extends State<ConfinementNannyScreen> {
                         height: 15,
                       ),
                       RoundButton(
-                          text: 'Search', bgColor: kbuttonColor, press: () {
-                            Get.to(() => ConfinementNannyPageScreen(dateTime: dateTime!,));
+                          text: 'Book Now', bgColor: kbuttonColor, press: () {
+                            Get.to(() => const BookingSummaryScreen());
                       }),
                     ],
                   ),
@@ -313,7 +300,7 @@ class _ConfinementNannyScreenState extends State<ConfinementNannyScreen> {
                             image: const DecorationImage(
                                 fit: BoxFit.cover,
                                 image:
-                                    AssetImage('assets/images/Pictures.png'))),
+                                AssetImage('assets/images/Pictures.png'))),
                         height: 70,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,

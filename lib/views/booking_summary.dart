@@ -54,11 +54,18 @@ class BookingSummaryScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        CircleAvatar(
-                          child:
-                              SvgPicture.asset('assets/images/My PROFILE.svg'),
-                          radius: 24,
-                          backgroundColor: Colors.yellow,
+                        Container(
+                          height: 50,
+                          width: 50,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(50),
+                              image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage(
+                                  'assets/images/Rectangle (3).png',
+                                ),
+                              )
+                          ),
                         ),
                         const SizedBox(
                           width: 15,
