@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch().copyWith(primary: const Color(0xff0028CC)),
       ),
-      home: const SplashScreen(),
+      home: const BottomNavScreen(),
     );
   }
 }

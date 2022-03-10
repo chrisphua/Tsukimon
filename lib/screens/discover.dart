@@ -229,7 +229,7 @@ class DiscoverScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 20,),
                   Padding(
-                    padding: const EdgeInsets.only(left: 25, right: 25),
+                    padding: const EdgeInsets.only(left: 35, right: 30),
                     child: GestureDetector(
                       onTap: () {
                         Get.to(() => const ConfinementNannyScreen());
