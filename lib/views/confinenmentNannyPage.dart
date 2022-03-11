@@ -46,7 +46,7 @@ class ConfinementNannyPageScreen extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(left: 25, right: 20),
+          padding: const EdgeInsets.only(left: 20, right: 20),
           child: Column(
             children: [
               const SizedBox(height: 20,),

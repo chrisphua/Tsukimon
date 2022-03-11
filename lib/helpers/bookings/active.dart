@@ -95,7 +95,7 @@ class ActivePageWidget extends StatelessWidget {
                               color: Color(0xff6A6A6A),
                             ),
                           ),
-                          SizedBox(width: 20,),
+                          SizedBox(width: 15,),
                           Text(
                             'Wednesday, 1 June 2022',
                             style: TextStyle(
@@ -240,7 +240,7 @@ class ActivePageWidget extends StatelessWidget {
                               color: Color(0xff6A6A6A),
                             ),
                           ),
-                          SizedBox(width: 20,),
+                          SizedBox(width: 15,),
                           Text(
                             'Wednesday, 1 June 2022',
                             style: TextStyle(
