@@ -76,7 +76,7 @@ class _ConfinementNannyScreenState extends State<ConfinementNannyScreen> {
                           ),
                           GestureDetector(
                             onTap: () {
-                              Get.to(() => const BookingSummaryScreen());
+                              Get.to(() => const ConfinementNannyPageScreen());
                             },
                             child: const Text(
                               'skip for now',

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tsukimon/views/confinenmentNannyPage.dart';
 import 'package:tsukimon/views/splash_screen.dart';
 import 'package:tsukimon/widgets/bottomnav.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch().copyWith(primary: const Color(0xff0028CC)),
       ),
-      home: const BottomNavScreen(),
+      home: const ConfinementNannyPageScreen(),
     );
   }
 }
