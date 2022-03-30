@@ -1,7 +1,16 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-class AccountPageScreen extends StatelessWidget {
+class AccountPageScreen extends StatefulWidget {
   const AccountPageScreen({Key? key}) : super(key: key);
+
+  @override
+  State<AccountPageScreen> createState() => _AccountPageScreenState();
+}
+
+class _AccountPageScreenState extends State<AccountPageScreen> {
+
+  User? user = FirebaseAuth.instance.currentUser;
 
   @override
   Widget build(BuildContext context) {
@@ -38,19 +47,29 @@ class AccountPageScreen extends StatelessWidget {
                     width: 150,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(150),
-                        image: const DecorationImage(
+                        image: DecorationImage(
                           fit: BoxFit.cover,
-                          image: AssetImage(
+                          image: user!.photoURL != null ? NetworkImage(
+                            user!.photoURL!,
+                          ) : const AssetImage(
                             'assets/images/unsplash_Zz5LQe-VSMY (1).png',
-                          ),
+                          ) as ImageProvider,
                         )
                     ),
                   ),
                 ),
                 const SizedBox(height: 15,),
-                const Center(
-                  child: Text(
-                    'Sofina_Chng',
+                Center(
+                  child: user!.displayName != null ? Text(
+                    user!.displayName!,
+                    style: const TextStyle(
+                      fontSize: 32.0,
+                      fontFamily: 'Roboto',
+                      fontWeight: FontWeight.w600,
+                      color: Color.fromARGB(255, 15, 15, 15),
+                    ),
+                  ) : const Text(
+                    '',
                     style: TextStyle(
                       fontSize: 32.0,
                       fontFamily: 'Roboto',

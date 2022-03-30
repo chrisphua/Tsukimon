@@ -39,9 +39,9 @@ class ConfinementNannyPageScreen extends StatelessWidget {
                 fontWeight: FontWeight.w400,
                 color: Color(0xff5273FF),
               ),
-            ) : Text(
-              '${dateTime!.day}/${dateTime!.month}/${dateTime!.year}',
-              style: const TextStyle(
+            ) : const Text(
+              'Selected Date',
+              style: TextStyle(
                 fontSize: 12.0,
                 fontFamily: 'Roboto',
                 fontWeight: FontWeight.w400,
@@ -54,7 +54,7 @@ class ConfinementNannyPageScreen extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(left: 20, right: 20),
+          padding: const EdgeInsets.only(left: 25, right: 20),
           child: Column(
             children: [
               const SizedBox(height: 20,),
@@ -68,8 +68,7 @@ class ConfinementNannyPageScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         Container(
-                          margin: const EdgeInsets.only(right: 15),
-                          width: MediaQuery.of(context).size.width /3,
+                          width: MediaQuery.of(context).size.width /2.6,
                           height: 220,
                           decoration: BoxDecoration(
                             color: const Color(0xffFFFFFF),
@@ -167,7 +166,7 @@ class ConfinementNannyPageScreen extends StatelessWidget {
                       children: [
                         Container(
                           margin: const EdgeInsets.only(right: 15),
-                          width: MediaQuery.of(context).size.width /3,
+                          width: MediaQuery.of(context).size.width /2.6,
                           height: 220,
                           decoration: BoxDecoration(
                             color: const Color(0xffFFFFFF),
@@ -271,7 +270,7 @@ class ConfinementNannyPageScreen extends StatelessWidget {
                       children: [
                         Container(
                           margin: const EdgeInsets.only(right: 15),
-                          width: MediaQuery.of(context).size.width /3,
+                          width: MediaQuery.of(context).size.width /2.6,
                           height: 220,
                           decoration: BoxDecoration(
                             color: const Color(0xffFFFFFF),
@@ -369,7 +368,7 @@ class ConfinementNannyPageScreen extends StatelessWidget {
                       children: [
                         Container(
                           margin: const EdgeInsets.only(right: 15),
-                          width: MediaQuery.of(context).size.width /3,
+                          width: MediaQuery.of(context).size.width /2.6,
                           height: 220,
                           decoration: BoxDecoration(
                             color: const Color(0xffFFFFFF),

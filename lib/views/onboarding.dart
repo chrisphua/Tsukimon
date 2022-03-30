@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:tsukimon/controllers/authController.dart';
 import 'package:tsukimon/utilities/constant.dart';
 import 'package:tsukimon/utilities/widgets/mytextfield.dart';
 import 'package:tsukimon/utilities/widgets/roundButton.dart';
 import 'package:tsukimon/views/login.dart';
 import 'package:tsukimon/views/register_one.dart';
 import 'package:tsukimon/widgets/bottomnav.dart';
+import 'package:tsukimon/widgets/progressHUD.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({Key? key}) : super(key: key);
@@ -19,8 +21,18 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   TextEditingController? emailController = TextEditingController();
   TextEditingController? passwordController = TextEditingController();
 
+  bool isApiCallProcess = false;
+
   @override
   Widget build(BuildContext context) {
+    return ProgressHUD(
+      child: _uiSetup(context),
+      inAsyncCall: isApiCallProcess,
+      opacity: 0.3,
+    );
+  }
+
+  Widget _uiSetup(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -113,8 +125,32 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     SvgPicture.asset('assets/images/Apple.svg'),
-                    SvgPicture.asset('assets/images/Facebook.svg'),
-                    SvgPicture.asset('assets/images/Google.svg'),
+                    GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            isApiCallProcess = true;
+                          });
+                          AuthController auth = AuthController();
+                          auth.signInWithFacebook();
+                          setState(() {
+                            isApiCallProcess = false;
+                          });
+                        },
+                        child: SvgPicture.asset('assets/images/Facebook.svg')
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          isApiCallProcess = true;
+                        });
+                        AuthController auth = AuthController();
+                        auth.signInWithGoogle();
+                        setState(() {
+                          isApiCallProcess = false;
+                        });
+                      },
+                        child: SvgPicture.asset('assets/images/Google.svg')
+                    ),
                   ],
                 ),
               ),
